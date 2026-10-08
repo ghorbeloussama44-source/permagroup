@@ -238,26 +238,39 @@
   /* ---------- Marquee ---------- */
   $$('.marquee__track').forEach(function (tr) { tr.innerHTML += tr.innerHTML; tr.setAttribute('aria-hidden', 'true'); });
 
-  /* ---------- Héros WebGL ---------- */
+  /* ---------- Héros WebGL ----------
+   * La photo vit dans un conteneur dédié (.hero__media / .phero__media) :
+   * plein cadre sur grand écran, posée au-dessus du texte sur mobile. */
   var fx = null, heroFx = null;
   var hero = $('.hero');
-  if (hero && w.PermaGL && !reduce) {
+  if (hero) {
+    var media = d.createElement('div'); media.className = 'hero__media';
+    hero.insertBefore(media, hero.firstChild);
     var slides = $$('.hero__slide', hero);
-    var urls = slides.map(function (s) {
-      var m = /url\((['"]?)(.*?)\1\)/.exec(s.style.backgroundImage || ''); return m ? m[2] : null;
-    });
-    var cv = d.createElement('canvas'); cv.className = 'hero__gl'; cv.setAttribute('aria-hidden', 'true');
-    hero.insertBefore(cv, hero.firstChild);
-    fx = new PermaGL.FX(cv, urls, { host: hero, dark: 0 });
-    if (fx.ok) { hero.classList.add('has-gl'); heroFx = fx; } else cv.remove();
+    slides.forEach(function (s) { media.appendChild(s); });
+    if (w.PermaGL && !reduce) {
+      var urls = slides.map(function (s) {
+        var m = /url\((['"]?)(.*?)\1\)/.exec(s.style.backgroundImage || ''); return m ? m[2] : null;
+      });
+      var cv = d.createElement('canvas'); cv.className = 'hero__gl'; cv.setAttribute('aria-hidden', 'true');
+      media.appendChild(cv);
+      fx = new PermaGL.FX(cv, urls, { host: media, dark: 0 });
+      if (fx.ok) { hero.classList.add('has-gl'); heroFx = fx; } else cv.remove();
+    }
   }
   var pheroFx = null, phero = $('.phero');
-  if (phero && w.PermaGL && !reduce && !hero) {
-    var m2 = /url\((['"]?)(.*?)\1\)/.exec(phero.style.backgroundImage || '');
-    var cv2 = d.createElement('canvas'); cv2.className = 'phero__gl'; cv2.setAttribute('aria-hidden', 'true');
-    phero.insertBefore(cv2, phero.firstChild);
-    pheroFx = new PermaGL.FX(cv2, [m2 ? m2[2] : null], { host: phero, dark: 1 });
-    if (pheroFx.ok) phero.classList.add('has-gl'); else cv2.remove();
+  if (phero && !hero) {
+    var pm = d.createElement('div'); pm.className = 'phero__media';
+    pm.style.backgroundImage = phero.style.backgroundImage;
+    phero.insertBefore(pm, phero.firstChild);
+    phero.classList.add('has-media');
+    if (w.PermaGL && !reduce) {
+      var m2 = /url\((['"]?)(.*?)\1\)/.exec(phero.style.backgroundImage || '');
+      var cv2 = d.createElement('canvas'); cv2.className = 'phero__gl'; cv2.setAttribute('aria-hidden', 'true');
+      pm.appendChild(cv2);
+      pheroFx = new PermaGL.FX(cv2, [m2 ? m2[2] : null], { host: pm, dark: 1 });
+      if (pheroFx.ok) phero.classList.add('has-gl'); else cv2.remove();
+    }
   }
 
   /* Diaporama : points, compteur, autoplay */
