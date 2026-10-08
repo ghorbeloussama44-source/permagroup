@@ -39,30 +39,103 @@
     </div>
   </div>
 </section>
-<section class="section">
+<section class="section bk-sec" id="devis">
   <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <span class="eyebrow">Nous contacter</span>
-        <h2 style="margin-bottom:26px">Restons en contact</h2>
-        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l1 4v3a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg></div><div><h4>T&eacute;l&eacute;phone</h4><p>(+216) 22 929 389</p></div></div>
-        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><div><h4>E-mail</h4><p>contact@perma.doctor</p></div></div>
-        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><h4>Adresse</h4><p>Immeuble Perma, HI64 Hédi Nouira, Borj Louzir, Ariana, Tunisie</p></div></div>
-        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Zm4.3 12.4c-.2.5-1 .9-1.4 1-.4 0-.8.2-2.6-.6-2.2-1-3.6-3.2-3.7-3.4-.1-.2-.9-1.2-.9-2.2s.5-1.6.7-1.8c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.5l.7 1.7c0 .2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.5.3 0 .1 0 .6-.2 1.1Z"/></svg></div><div><h4>WhatsApp</h4><p><a href="https://wa.me/21622929389" style="color:var(--teal-600);font-weight:600">&Eacute;crivez-nous directement</a></p></div></div>
+    <div class="section-head reveal">
+      <span class="eyebrow">Demande de devis</span>
+      <h2>Votre projet en <em>quatre</em> &eacute;tapes</h2>
+      <p>Choisissez votre intervention et un cr&eacute;neau pour une consultation offerte avec un conseiller. Votre r&eacute;capitulatif se construit au fil de vos r&eacute;ponses.</p>
+    </div>
+    <div class="bk reveal" data-booking>
+      <div class="bk__main">
+        <ol class="bk__steps" aria-label="&Eacute;tapes">
+          <li><span class="bk__n">1</span><span>Intervention</span></li>
+          <li><span class="bk__n">2</span><span>Consultation</span></li>
+          <li><span class="bk__n">3</span><span>Coordonn&eacute;es</span></li>
+          <li><span class="bk__n">4</span><span>Envoi</span></li>
+        </ol>
+        <div class="bk__progress" aria-hidden="true"><i></i></div>
+
+        <div class="bk__panel" data-step="1">
+          <h2>Quel p&ocirc;le vous int&eacute;resse&nbsp;?</h2>
+          <p class="bk__sub">S&eacute;lectionnez un p&ocirc;le, puis l'intervention souhait&eacute;e.</p>
+          <div class="bk__poles" role="group" aria-label="P&ocirc;les"></div>
+          <h3 class="bk__h3">Choisissez une intervention</h3>
+          <div class="bk__chips bk__items" role="group" aria-label="Interventions"></div>
+        </div>
+
+        <div class="bk__panel" data-step="2" hidden>
+          <h2>Votre consultation offerte</h2>
+          <p class="bk__sub">Un conseiller vous appelle pour &eacute;changer sur votre projet, sans engagement.</p>
+          <h3 class="bk__h3">Comment pr&eacute;f&eacute;rez-vous &eacute;changer&nbsp;?</h3>
+          <div class="bk__chips bk__modes" role="group" aria-label="Mode de consultation"></div>
+          <h3 class="bk__h3">Choisissez un jour</h3>
+          <div class="bk__days" role="group" aria-label="Jours"></div>
+          <h3 class="bk__h3">Choisissez un cr&eacute;neau <small>(heure de Tunis)</small></h3>
+          <div class="bk__chips bk__slots" role="group" aria-label="Cr&eacute;neaux"></div>
+          <h3 class="bk__h3">Quand envisagez-vous votre s&eacute;jour&nbsp;? <small>(facultatif)</small></h3>
+          <div class="bk__chips bk__stays" role="group" aria-label="P&eacute;riode de s&eacute;jour"></div>
+        </div>
+
+        <div class="bk__panel" data-step="3" hidden>
+          <h2>Vos coordonn&eacute;es</h2>
+          <p class="bk__sub">Pour que votre conseiller puisse vous recontacter.</p>
+          <div class="bk__form">
+            <div class="field"><label for="bk-name">Pr&eacute;nom &amp; nom</label><input id="bk-name" name="bk-name" type="text" autocomplete="name" placeholder="Votre nom"></div>
+            <div class="field"><label for="bk-phone">T&eacute;l&eacute;phone / WhatsApp</label><input id="bk-phone" name="bk-phone" type="tel" autocomplete="tel" placeholder="+33 6 12 34 56 78"></div>
+            <div class="field bk__full"><label for="bk-email">E-mail</label><input id="bk-email" name="bk-email" type="email" autocomplete="email" placeholder="vous@email.com"></div>
+            <div class="field bk__full"><label for="bk-note">Votre message <small>(facultatif)</small></label><textarea id="bk-note" name="bk-note" rows="3" placeholder="Vos attentes, vos questions, vos ant&eacute;c&eacute;dents..."></textarea></div>
+          </div>
+          <div class="bk-consent" role="checkbox" tabindex="0" aria-checked="false"><span class="bk-consent__box"></span><span>J'accepte d'&ecirc;tre recontact&eacute;(e) et que mes donn&eacute;es soient trait&eacute;es de fa&ccedil;on confidentielle.</span></div>
+        </div>
+
+        <div class="bk__panel" data-step="4" hidden>
+          <div class="bk-done">
+            <svg class="bk-done__ic" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36"/><path d="m25 41 10 10 21-22"/></svg>
+            <h2>Plus qu'un clic</h2>
+            <p class="bk__sub">V&eacute;rifiez votre demande puis envoyez-la&nbsp;: elle s'ouvre pr&eacute;remplie dans WhatsApp ou dans votre messagerie. R&eacute;ponse sous 24&nbsp;h.</p>
+            <div class="bk-done__recap"></div>
+            <div class="bk-done__send">
+              <a class="btn btn--primary btn--lg bk-send--wa" href="#" target="_blank" rel="noopener">Envoyer via WhatsApp</a>
+              <a class="btn btn--outline btn--lg bk-send--mail" href="#">Envoyer par e-mail</a>
+            </div>
+            <button type="button" class="bk-edit">Modifier ma demande</button>
+          </div>
+        </div>
+
+        <div class="bk__nav">
+          <button type="button" class="bk__back">&larr; Retour</button>
+          <span class="bk__hint" aria-live="polite"></span>
+          <button type="button" class="btn btn--primary bk__next"><span>Continuer</span> <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
       </div>
-      <form class="form reveal" action="#" method="post" onsubmit="this.querySelector('.ok').style.display='block';return false;">
-        <div class="row2">
-          <div class="field"><label>Pr&eacute;nom &amp; nom</label><input type="text" required placeholder="Votre nom"></div>
-          <div class="field"><label>T&eacute;l&eacute;phone</label><input type="tel" placeholder="+216 ..."></div>
+
+      <aside class="bk__aside" aria-label="R&eacute;capitulatif">
+        <div class="bk-sum">
+          <div class="bk-sum__img"><img src="static/img/pole-face.webp" alt=""></div>
+          <div class="bk-sum__head"><span class="bk-sum__label">Votre demande</span><span class="bk-sum__pct">0&nbsp;%</span></div>
+          <div class="bk-sum__meter"><i></i></div>
+          <div class="bk-sum__pole">PermaFace</div>
+          <div class="bk-sum__tag">Chirurgie du visage</div>
+          <div class="bk-sum__rows" aria-live="polite"></div>
+          <ul class="bk-sum__trust">
+            <li>Devis gratuit &amp; sans engagement</li>
+            <li>R&eacute;ponse sous 24&nbsp;h</li>
+            <li>Donn&eacute;es confidentielles</li>
+          </ul>
         </div>
-        <div class="row2">
-          <div class="field"><label>E-mail</label><input type="email" required placeholder="vous@email.com"></div>
-          <div class="field"><label>Intervention souhait&eacute;e</label><select><option>PermaTeeth</option><option>PermaFace</option><option>PermaThin</option><option>PermaCosmetic</option><option>PermaMen</option><option>PermaBreast</option><option>PermaShape</option><option>PermaGraft</option></select></div>
-        </div>
-        <div class="field"><label>Votre message</label><textarea rows="5" placeholder="D&eacute;crivez votre projet..."></textarea></div>
-        <button class="btn btn--primary btn--lg" type="submit" style="width:100%">Envoyer ma demande</button>
-        <p class="ok" style="display:none;color:var(--teal-600);margin-top:14px;font-weight:600">Merci&nbsp;! Votre demande a bien &eacute;t&eacute; envoy&eacute;e, nous vous r&eacute;pondrons sous 24&nbsp;h.</p>
-      </form>
+      </aside>
+    </div>
+  </div>
+</section>
+<section class="section section--soft bk-contact">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Nous contacter</span><h2>Restons en contact</h2></div>
+    <div class="ci-row reveal">
+<div class="ci"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l1 4v3a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg></div><div><h4>T&eacute;l&eacute;phone</h4><p>(+216) 22 929 389</p></div></div>
+<div class="ci"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><div><h4>E-mail</h4><p>contact@perma.doctor</p></div></div>
+<div class="ci"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><h4>Adresse</h4><p>Immeuble Perma, HI64 Hédi Nouira, Borj Louzir, Ariana, Tunisie</p></div></div>
+<div class="ci"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Zm4.3 12.4c-.2.5-1 .9-1.4 1-.4 0-.8.2-2.6-.6-2.2-1-3.6-3.2-3.7-3.4-.1-.2-.9-1.2-.9-2.2s.5-1.6.7-1.8c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.5l.7 1.7c0 .2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.5.3 0 .1 0 .6-.2 1.1Z"/></svg></div><div><h4>WhatsApp</h4><p><a href="https://wa.me/21622929389" style="color:var(--teal-600);font-weight:600">&Eacute;crivez-nous directement</a></p></div></div>
     </div>
   </div>
 </section>
@@ -107,4 +180,5 @@
 <a class="fab" href="https://wa.me/21622929389" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Zm4.3 12.4c-.2.5-1 .9-1.4 1-.4 0-.8.2-2.6-.6-2.2-1-3.6-3.2-3.7-3.4-.1-.2-.9-1.2-.9-2.2s.5-1.6.7-1.8c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.5l.7 1.7c0 .2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.5.3 0 .1 0 .6-.2 1.1Z"/></svg></a>
 <script src="static/js/perma-webgl.js"></script>
 <script src="static/js/perma.js"></script>
+<script src="static/js/perma-booking.js"></script>
 </body></html>
