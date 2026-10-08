@@ -235,6 +235,17 @@
   /* ---------- Dessins au trait (cygne, routes) ---------- */
   $$('.trust__swan').forEach(observe);
 
+  /* ---------- Témoignages : visibles seulement s'il y a de vrais avis ---------- */
+  $$('[data-testi]').forEach(function (sec) {
+    var track = $('.testi__track', sec), items = $$('.testi__it', sec);
+    if (!items.length) return;
+    items.forEach(function (it) { track.appendChild(it); });
+    sec.hidden = false;
+    var step = function (dir) { track.scrollBy({ left: dir * (items[0].offsetWidth + 22), behavior: reduce ? 'auto' : 'smooth' }); };
+    $('.testi__nav--prev', sec).addEventListener('click', function () { step(-1); });
+    $('.testi__nav--next', sec).addEventListener('click', function () { step(1); });
+  });
+
   /* ---------- Marquee ---------- */
   $$('.marquee__track').forEach(function (tr) { tr.innerHTML += tr.innerHTML; tr.setAttribute('aria-hidden', 'true'); });
 
@@ -409,7 +420,7 @@
     hp.track.style.transform = 'translate3d(' + (-hp.x).toFixed(1) + 'px,0,0)';
     var bar = $('.hpin__bar i', hp.stick); if (bar) bar.style.transform = 'scaleX(' + k.toFixed(3) + ')';
   }
-  if ($('#poles') && !reduce) {
+  if ($('#poles .grid-cards') && !reduce) {
     var hb = d.createElement('div'); hb.className = 'hpin__bar'; hb.innerHTML = '<i></i>';
     $('#poles .container').appendChild(hb);
   }
