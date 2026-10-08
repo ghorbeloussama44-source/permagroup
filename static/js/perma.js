@@ -175,6 +175,66 @@
     });
   });
 
+  /* ---------- Avant / après (repris du prototype) ---------- */
+  $$('.ba').forEach(function (ba) {
+    var bSrc = ba.dataset.before, aSrc = ba.dataset.after;
+    if (!bSrc || !aSrc) return;
+    ba.innerHTML =
+      '<div class="ba__img ba__img--after"><img alt="" draggable="false"></div>' +
+      '<div class="ba__img ba__img--before"><img alt="" draggable="false"></div>' +
+      '<span class="ba__lbl ba__lbl--b"></span><span class="ba__lbl ba__lbl--a"></span>' +
+      '<div class="ba__line" aria-hidden="true"><span class="ba__knob"><i></i><i></i></span></div>' +
+      '<input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparer : glisser vers la gauche ou la droite">';
+    var imgs = $$('img', ba), range = $('.ba__range', ba);
+    $('.ba__lbl--b', ba).innerHTML = ba.dataset.labelBefore || 'Avant';
+    $('.ba__lbl--a', ba).innerHTML = ba.dataset.labelAfter || 'Après';
+    var fail = function () {
+      var sec = ba.closest('[data-ba-sec]');
+      if (sec) sec.hidden = true; else ba.hidden = true;
+    };
+    var loaded = 0;
+    imgs.forEach(function (im, i) {
+      im.addEventListener('load', function () { if (++loaded === 2) ba.classList.add('is-ready'); });
+      im.addEventListener('error', fail);
+      im.src = i ? bSrc : aSrc;
+    });
+    var cur = 50, tgt = 50, raf = 0;
+    var paint = function () {
+      cur = lerp(cur, tgt, reduce ? 1 : .2);
+      if (Math.abs(cur - tgt) < .05) cur = tgt;
+      ba.style.setProperty('--p', cur.toFixed(2) + '%');
+      raf = cur !== tgt ? requestAnimationFrame(paint) : 0;
+    };
+    var set = function (v) { tgt = clamp(v, 0, 100); range.value = Math.round(tgt); if (!raf) raf = requestAnimationFrame(paint); };
+    var fromX = function (x) { var r = ba.getBoundingClientRect(); return (x - r.left) / r.width * 100; };
+    var drag = false;
+    ba.addEventListener('pointerdown', function (e) {
+      if (e.button) return;
+      drag = true; ba.classList.add('is-drag'); stopIntro();
+      try { ba.setPointerCapture(e.pointerId); } catch (er) {}
+      set(fromX(e.clientX));
+    });
+    ba.addEventListener('pointermove', function (e) { if (drag) set(fromX(e.clientX)); });
+    var end = function () { drag = false; ba.classList.remove('is-drag'); };
+    ba.addEventListener('pointerup', end); ba.addEventListener('pointercancel', end);
+    range.addEventListener('input', function () { stopIntro(); set(+range.value); });
+    /* balayage d'introduction : montre que ça se manipule */
+    var introT = [], introDone = false;
+    var stopIntro = function () { introDone = true; introT.forEach(clearTimeout); };
+    if (!reduce && 'IntersectionObserver' in w) {
+      var bio = new IntersectionObserver(function (en) {
+        if (!en[0].isIntersecting || introDone) return;
+        bio.disconnect();
+        [[400, 22], [1300, 78], [2200, 50]].forEach(function (k) { introT.push(setTimeout(function () { if (!introDone) set(k[1]); }, k[0])); });
+      }, { threshold: .6 });
+      bio.observe(ba);
+    }
+    ba.style.setProperty('--p', '50%');
+  });
+
+  /* ---------- Dessins au trait (cygne, routes) ---------- */
+  $$('.trust__swan').forEach(observe);
+
   /* ---------- Marquee ---------- */
   $$('.marquee__track').forEach(function (tr) { tr.innerHTML += tr.innerHTML; tr.setAttribute('aria-hidden', 'true'); });
 
@@ -354,9 +414,10 @@
     d.addEventListener('pointerover', function (e) {
       var t = e.target.closest ? e.target.closest('a,button,.btn,input,select,textarea,.hero__dot,.gallery a,.nav__hamb') : null;
       var g = t && t.closest && t.closest('.gallery');
-      ring.classList.toggle('is-link', !!t && !g);
-      ring.classList.toggle('is-view', !!g);
-      lab.textContent = g ? 'Voir' : '';
+      var cmp = e.target.closest && e.target.closest('.ba');
+      ring.classList.toggle('is-link', !!t && !g && !cmp);
+      ring.classList.toggle('is-view', !!g || !!cmp);
+      lab.textContent = cmp ? 'Glisser' : g ? 'Voir' : '';
     });
     d.addEventListener('pointerdown', function () { ring.classList.add('is-down'); });
     d.addEventListener('pointerup', function () { ring.classList.remove('is-down'); });
