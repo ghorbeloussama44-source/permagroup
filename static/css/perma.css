@@ -709,3 +709,39 @@ html.js .hpin .scard.reveal{opacity:1;transform:perspective(1100px) rotateX(var(
   .vals--faq .val__body>p{padding-left:0}
   .city__t{font-size:22px}
 }
+
+/* ---------- Charte par pôle : duotone doux (repris du formulaire) ---------- */
+.scard--pole .scard__img::before{background:linear-gradient(160deg,var(--c),var(--ink-2) 92%);opacity:.92}
+.scard--pole .scard__body h3::before{content:'';display:block;width:26px;height:4px;border-radius:4px;background:var(--c);margin-bottom:14px;transition:width .6s var(--ease)}
+.scard--pole:hover .scard__body h3::before{width:56px}
+.scard--pole .scard__tag{color:color-mix(in srgb,var(--c) 62%,var(--ink))}
+.scard--pole .scard__link{color:color-mix(in srgb,var(--c) 55%,var(--ink))}
+.scard--pole:hover{border-color:var(--c);box-shadow:0 26px 50px -30px var(--c)}
+.scard--pole::after{background:radial-gradient(420px circle at var(--gx,50%) var(--gy,50%),color-mix(in srgb,var(--c) 28%,transparent),transparent 60%)}
+
+.pole-page .phero .eyebrow{color:color-mix(in srgb,var(--c) 55%,#fff)}
+.pole-page .phero .eyebrow::before{background:var(--c)}
+.pole-page .proc__num,.pole-page .proc__cta{color:color-mix(in srgb,var(--c) 60%,var(--ink))}
+.pole-page .proc__media{background:url(../img/swan.svg) no-repeat 50% 50%/auto 34%,linear-gradient(160deg,var(--c),var(--ink-2) 92%)}
+.pole-page .proc__media img{filter:grayscale(1) contrast(1.15)}
+.pole-page .proc__media::after{background:linear-gradient(160deg,var(--c),var(--ink-2) 95%);mix-blend-mode:multiply;opacity:.55;transition:opacity .8s var(--ease)}
+.pole-page .proc:hover .proc__media::after{opacity:.12}
+.pole-page .proc:hover .proc__media img{filter:none}
+.pole-page .proc__media img{transition:filter .8s var(--ease)}
+.pole-page .section-head .eyebrow{color:color-mix(in srgb,var(--c) 60%,var(--ink))}
+.pole-page .proc{border-top-color:color-mix(in srgb,var(--c) 22%,var(--line))}
+
+/* menu : une couleur par pôle */
+.nav__drop a{--c:var(--teal-600)}
+.nav__drop a[href="permateeth.html"]{--c:#df7a4f}.nav__drop a[href="permaface.html"]{--c:#8b8fd4}
+.nav__drop a[href="permathin.html"]{--c:#d9637d}.nav__drop a[href="permacosmetic.html"]{--c:#86b46f}
+.nav__drop a[href="permamen.html"]{--c:#5f86a8}.nav__drop a[href="permabreast.html"]{--c:#c97b9a}
+.nav__drop a[href="permashape.html"]{--c:#c9a96a}.nav__drop a[href="permagraft.html"]{--c:#4f9d94}
+.nav__drop .ic{background:color-mix(in srgb,var(--c) 16%,#fff);color:color-mix(in srgb,var(--c) 70%,var(--ink))}
+.nav__drop a:hover .ic{background:var(--c);color:#fff}
+@media (max-width:1080px){.nav__drop .ic{background:color-mix(in srgb,var(--c) 25%,transparent);color:color-mix(in srgb,var(--c) 70%,#fff)}}
+
+/* formulaire : nom long sur mobile, sélection qui garde sa teinte */
+.bk-pole b{font-size:clamp(.92rem,3.9vw,1.12rem);overflow-wrap:anywhere;max-width:100%}
+.bk-pole[aria-pressed=true] .bk-pole__img::after{opacity:.4}
+.bk-pole[aria-pressed=true] .bk-pole__img img{filter:grayscale(.3) contrast(1.15)}
