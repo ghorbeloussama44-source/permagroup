@@ -43,7 +43,7 @@
   var q = new URLSearchParams(location.search);
   var st = { step: 1, pole: 'face', item: '', mode: 'video', date: '', time: '', stay: '', name: '', phone: '', email: '', note: '', consent: false };
   if (q.get('pole') && POLES.some(function (p) { return p.key === q.get('pole'); })) st.pole = q.get('pole');
-  if (q.get('i')) st.item = q.get('i');
+  if (q.get('i')) st.item = q.get('i') === 'conseil' ? UNSURE : q.get('i');
   var pole = function () { return POLES.filter(function (p) { return p.key === st.pole; })[0]; };
 
   /* ---------- construction ---------- */
