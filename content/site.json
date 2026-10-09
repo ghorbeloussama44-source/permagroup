@@ -1,0 +1,1060 @@
+{
+ "poles": {
+  "face": {
+   "page": "permaface.html",
+   "name": "PermaFace",
+   "tag": "Chirurgie du visage",
+   "lead": "Effacez les marques du temps et harmonisez vos traits grâce à une chirurgie du visage précise et naturelle, menée par les meilleurs chirurgiens plasticiens de Tunisie.",
+   "intro_title": "Une expertise dédiée",
+   "intro": "La chirurgie esthétique du visage ne cesse de se développer dans le monde entier. PermaFace corrige les aspects disgracieux et atténue les effets du vieillissement, tout en vous offrant un séjour serein et une assistance personnalisée.",
+   "procedures": [
+    {
+     "title": "Lifting cervico-facial",
+     "text": "Le lifting redrape la peau du visage et du cou, repositionne les tissus relâchés et restaure un ovale ferme et net, pour un rajeunissement visible mais naturel.",
+     "img": "static/img/procedures/face-lifting-cervico-facial.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "7 à 10 jours",
+       "Séjour"
+      ],
+      [
+       "Durable",
+       "Effet"
+      ]
+     ]
+    },
+    {
+     "title": "Blépharoplastie",
+     "text": "Chirurgie des paupières qui retire l'excès de peau et les poches sous les yeux, pour un regard reposé, ouvert et rajeuni.",
+     "img": "static/img/procedures/face-blepharoplastie.webp",
+     "meta": [
+      [
+       "Locale/générale",
+       "Anesthésie"
+      ],
+      [
+       "1 à 2 h",
+       "Durée"
+      ],
+      [
+       "5 à 7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Rhinoplastie",
+     "text": "Remodelage du nez pour en corriger la forme, la taille ou les imperfections, et l'harmoniser avec l'ensemble du visage tout en préservant la respiration.",
+     "img": "static/img/procedures/face-rhinoplastie.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "7 jours",
+       "Séjour"
+      ],
+      [
+       "Naturel",
+       "Résultat"
+      ]
+     ]
+    },
+    {
+     "title": "Génioplastie",
+     "text": "Chirurgie du menton qui en corrige la projection et la forme afin d'équilibrer le profil et l'harmonie du visage.",
+     "img": "static/img/procedures/face-genioplastie.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "1 h",
+       "Durée"
+      ],
+      [
+       "5 à 7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Otoplastie",
+     "text": "Correction des oreilles décollées : l'otoplastie repositionne le cartilage pour des oreilles naturelles et bien proportionnées.",
+     "img": "static/img/procedures/face-otoplastie.webp",
+     "meta": [
+      [
+       "Locale",
+       "Anesthésie"
+      ],
+      [
+       "1 à 2 h",
+       "Durée"
+      ],
+      [
+       "Court",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Lipofilling du visage",
+     "text": "Injection de votre propre graisse pour redonner du volume aux joues et pommettes, combler les creux et régénérer la peau de façon totalement naturelle.",
+     "img": "static/img/procedures/face-lipofilling-du-visage.webp",
+     "meta": [
+      [
+       "Locale",
+       "Anesthésie"
+      ],
+      [
+       "1 h",
+       "Durée"
+      ],
+      [
+       "Naturel",
+       "Effet"
+      ]
+     ]
+    },
+    {
+     "title": "Réduction des boules de Bichat",
+     "text": "Retrait partiel des boules de Bichat pour affiner le bas du visage, creuser les joues et sculpter des pommettes plus dessinées.",
+     "img": "static/img/procedures/face-reduction-des-boules-de-bichat.webp",
+     "meta": [
+      [
+       "Locale",
+       "Anesthésie"
+      ],
+      [
+       "30 min",
+       "Durée"
+      ],
+      [
+       "Court",
+       "Séjour"
+      ]
+     ]
+    }
+   ]
+  },
+  "breast": {
+   "page": "permabreast.html",
+   "name": "PermaBreast",
+   "tag": "Chirurgie des seins",
+   "lead": "Poitrine trop menue, trop lourde ou relâchée : PermaBreast remodelle votre poitrine pour vous redonner une image positive de votre corps et une silhouette harmonieuse.",
+   "intro_title": "Une expertise dédiée",
+   "intro": "Les chirurgies mammaires comptent parmi les opérations les plus demandées au monde. Le choix de la clinique, du chirurgien et des prothèses est déterminant : PermaBreast vous accompagne à chaque étape pour un résultat sur-mesure et sécurisé.",
+   "procedures": [
+    {
+     "title": "Prothèse mammaire",
+     "text": "Augmentation du volume des seins par la pose d'implants adaptés à votre morphologie et à vos attentes, pour une poitrine galbée et naturelle.",
+     "img": "static/img/procedures/breast-prothese-mammaire.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "1 à 2 h",
+       "Durée"
+      ],
+      [
+       "5 à 7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Lifting des seins",
+     "text": "Le lifting (mastopexie) corrige la ptose mammaire en remontant et raffermissant la poitrine pour lui redonner une forme jeune et tonique.",
+     "img": "static/img/procedures/breast-lifting-des-seins.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "2 à 3 h",
+       "Durée"
+      ],
+      [
+       "7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Réduction mammaire",
+     "text": "Réduction du volume d'une poitrine trop forte pour soulager les douleurs dorsales et retrouver une silhouette équilibrée et confortable.",
+     "img": "static/img/procedures/breast-reduction-mammaire.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "2 à 3 h",
+       "Durée"
+      ],
+      [
+       "7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Lipofilling mammaire",
+     "text": "Augmentation naturelle du volume des seins grâce à votre propre graisse, sans implant, pour un résultat doux et harmonieux.",
+     "img": "static/img/procedures/breast-lipofilling-mammaire.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "2 h",
+       "Durée"
+      ],
+      [
+       "Naturelle",
+       "Origine"
+      ]
+     ]
+    },
+    {
+     "title": "Correction des mamelons",
+     "text": "Correction des mamelons ombiliqués ou hypertrophiés pour une poitrine harmonieuse jusque dans les détails.",
+     "img": "static/img/procedures/breast-correction-des-mamelons.webp",
+     "meta": [
+      [
+       "Locale",
+       "Anesthésie"
+      ],
+      [
+       "45 min",
+       "Durée"
+      ],
+      [
+       "Court",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Reconstruction des seins",
+     "text": "Reconstruction mammaire après une mastectomie pour restaurer le volume et la symétrie, une étape essentielle de la reconstruction de soi.",
+     "img": "static/img/procedures/breast-reconstruction-des-seins.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "Sur-mesure",
+       "Approche"
+      ],
+      [
+       "Personnalisé",
+       "Suivi"
+      ]
+     ]
+    }
+   ]
+  },
+  "shape": {
+   "page": "permashape.html",
+   "name": "PermaShape",
+   "tag": "Chirurgie de la silhouette",
+   "lead": "Sculptez et harmonisez votre silhouette : PermaShape remodelle une ou plusieurs zones du corps pour qu'elles correspondent enfin à vos attentes.",
+   "intro_title": "Une expertise dédiée",
+   "intro": "La chirurgie de la silhouette peut être esthétique ou réparatrice. Elle remodelle et harmonise le corps zone par zone (fesses, cuisses, bras, abdomen) ou dans son ensemble, pour une silhouette équilibrée et épanouie.",
+   "procedures": [
+    {
+     "title": "Liposuccion",
+     "text": "Aspiration des amas graisseux localisés et résistants aux régimes (ventre, hanches, cuisses) pour redessiner durablement les contours du corps.",
+     "img": "static/img/procedures/shape-liposuccion.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "1 à 3 h",
+       "Durée"
+      ],
+      [
+       "5 à 7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Abdominoplastie",
+     "text": "Chirurgie du ventre qui retire l'excès de peau et de graisse et resserre les muscles abdominaux, pour un ventre plat et tonique après grossesse ou amaigrissement.",
+     "img": "static/img/procedures/shape-abdominoplastie.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "2 à 3 h",
+       "Durée"
+      ],
+      [
+       "7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Lipofilling des fesses (BBL)",
+     "text": "Augmentation et galbe des fesses par réinjection de votre propre graisse, pour un résultat naturel et des courbes harmonieuses.",
+     "img": "static/img/procedures/shape-lipofilling-des-fesses.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "2 à 3 h",
+       "Durée"
+      ],
+      [
+       "Naturelle",
+       "Origine"
+      ]
+     ]
+    },
+    {
+     "title": "Implant fessier",
+     "text": "Pose d'implants pour augmenter le volume et la projection des fesses lorsque la graisse disponible est insuffisante.",
+     "img": "static/img/procedures/shape-implant-fessier.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "2 h",
+       "Durée"
+      ],
+      [
+       "7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Lifting des cuisses",
+     "text": "Retrait de l'excès cutané et raffermissement de la face interne des cuisses, souvent après un amaigrissement important.",
+     "img": "static/img/procedures/shape-lifting-des-cuisses.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "2 h",
+       "Durée"
+      ],
+      [
+       "7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Lifting des bras",
+     "text": "Le brachioplastie supprime la peau relâchée des bras pour des contours fermés et toniques.",
+     "img": "static/img/procedures/shape-lifting-des-bras.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "1 à 2 h",
+       "Durée"
+      ],
+      [
+       "5 à 7 jours",
+       "Séjour"
+      ]
+     ]
+    }
+   ]
+  },
+  "thin": {
+   "page": "permathin.html",
+   "name": "PermaThin",
+   "tag": "Chirurgie de l'obésité",
+   "lead": "Reprenez le contrôle de votre poids et de votre santé grâce à la chirurgie bariatrique, pratiquée par des chirurgiens digestifs expérimentés.",
+   "intro_title": "Une expertise dédiée",
+   "intro": "L'obésité est un phénomène en constante progression. PermaThin propose des solutions de chirurgie bariatrique de très haute qualité, menées par des chirurgiens passionnés, pour vous aider à perdre durablement du poids et retrouver une silhouette équilibrée.",
+   "procedures": [
+    {
+     "title": "Anneau gastrique",
+     "text": "Pose d'un anneau ajustable autour de la partie haute de l'estomac afin de réduire la quantité d'aliments ingérée. Technique réversible et peu invasive, réalisée par cœlioscopie.",
+     "img": "static/img/procedures/thin-anneau-gastrique.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "Cœlioscopie",
+       "Technique"
+      ],
+      [
+       "Oui",
+       "Réversible"
+      ]
+     ]
+    },
+    {
+     "title": "Sleeve gastrectomie",
+     "text": "Réduction d'environ deux tiers de l'estomac pour diminuer l'appétit et la sensation de faim. La sleeve est aujourd'hui l'une des interventions bariatriques les plus pratiquées.",
+     "img": "static/img/procedures/thin-sleeve-gastrectomie.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "Cœlioscopie",
+       "Technique"
+      ],
+      [
+       "5 à 7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Bypass gastrique",
+     "text": "Court-circuit d'une partie de l'estomac et de l'intestin pour limiter à la fois l'absorption et la prise alimentaire. Solution efficace pour les obésités importantes.",
+     "img": "static/img/procedures/thin-bypass-gastrique.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "Cœlioscopie",
+       "Technique"
+      ],
+      [
+       "Personnalisé",
+       "Suivi"
+      ]
+     ]
+    }
+   ]
+  },
+  "cosmetic": {
+   "page": "permacosmetic.html",
+   "name": "PermaCosmetic",
+   "tag": "Médecine esthétique",
+   "lead": "Sans bloc opératoire ni convalescence, la médecine esthétique lisse, repulpe et régénère votre peau pour un résultat naturel et immédiat.",
+   "intro_title": "Une expertise dédiée",
+   "intro": "PermaCosmetic regroupe les soins de médecine anti-âge : un domaine vaste qui entretient votre apparence et corrige les premiers signes du temps. Joli regard, front lissé, joues et pommettes repulpées : tout devient possible, avec un rendu très naturel.",
+   "procedures": [
+    {
+     "title": "Injection de Botox",
+     "text": "La toxine botulique détend les muscles responsables des rides d'expression (front, rides du lion, pattes d'oie) pour un visage lissé et reposé, sans figer l'expression.",
+     "img": "static/img/procedures/cosmetic-injection-de-botox.webp",
+     "meta": [
+      [
+       "Aucune",
+       "Anesthésie"
+      ],
+      [
+       "15 min",
+       "Durée"
+      ],
+      [
+       "4 à 6 mois",
+       "Effet"
+      ]
+     ]
+    },
+    {
+     "title": "Acide hyaluronique",
+     "text": "Avec l'âge, la peau se déshydrate. L'injection d'acide hyaluronique comble les rides, redonne du volume aux lèvres et aux pommettes et réhydrate la peau en profondeur.",
+     "img": "static/img/procedures/cosmetic-acide-hyaluronique.webp",
+     "meta": [
+      [
+       "Crème",
+       "Anesthésie"
+      ],
+      [
+       "30 min",
+       "Durée"
+      ],
+      [
+       "6 à 12 mois",
+       "Effet"
+      ]
+     ]
+    },
+    {
+     "title": "Injection PRP",
+     "text": "Le plasma riche en plaquettes, issu de votre propre sang, stimule la régénération cellulaire : il améliore l'éclat, la fermeté et la qualité de la peau de façon 100 % naturelle.",
+     "img": "static/img/procedures/cosmetic-injection-prp.webp",
+     "meta": [
+      [
+       "Aucune",
+       "Anesthésie"
+      ],
+      [
+       "45 min",
+       "Durée"
+      ],
+      [
+       "Naturelle",
+       "Origine"
+      ]
+     ]
+    }
+   ]
+  },
+  "teeth": {
+   "page": "permateeth.html",
+   "name": "PermaTeeth",
+   "tag": "Dentisterie esthétique",
+   "lead": "Retrouvez un sourire éclatant grâce à une dentisterie esthétique de pointe : blanchiment, facettes céramiques et implants réalisés par des praticiens diplômés, pour un résultat naturel et durable.",
+   "intro_title": "Une expertise dédiée",
+   "intro": "PermaTeeth, le pôle dentaire du groupe Perma, met à votre disposition une gamme complète de soins esthétiques rapides et efficaces. Notre objectif : vous redonner un sourire harmonieux en toute sécurité, dans des cliniques modernes et au meilleur rapport qualité-prix.",
+   "procedures": [
+    {
+     "title": "Facettes dentaires",
+     "text": "Fines pellicules de céramique ou de porcelaine posées sur la face visible des dents, les facettes corrigent en une seule séance la couleur, la forme et les petits espaces, pour un sourire parfaitement aligné et lumineux.",
+     "img": "static/img/procedures/teeth-facettes-dentaires.webp",
+     "meta": [
+      [
+       "Locale légère",
+       "Anesthésie"
+      ],
+      [
+       "1 à 2 séances",
+       "Durée"
+      ],
+      [
+       "3 à 5 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Blanchiment dentaire",
+     "text": "Le blanchiment est le soin de dentisterie cosmétique le plus demandé. Il éclaircit la teinte de l'émail de plusieurs nuances pour un sourire brillant et étincelant, sans altérer la structure de la dent.",
+     "img": "static/img/procedures/teeth-blanchiment-dentaire.webp",
+     "meta": [
+      [
+       "Aucune",
+       "Anesthésie"
+      ],
+      [
+       "45 à 60 min",
+       "Durée"
+      ],
+      [
+       "Immédiat",
+       "Résultat"
+      ]
+     ]
+    },
+    {
+     "title": "Implant dentaire",
+     "text": "Petit dispositif en titane remplaçant la racine d'une dent manquante, l'implant constitue la solution la plus durable pour éviter la perte osseuse et restaurer la mastication. Il se soude à l'os puis reçoit la couronne définitive.",
+     "img": "static/img/procedures/teeth-implant-dentaire.webp",
+     "meta": [
+      [
+       "Locale",
+       "Anesthésie"
+      ],
+      [
+       "10 à 20 min",
+       "Durée"
+      ],
+      [
+       "Court",
+       "Séjour"
+      ]
+     ]
+    }
+   ]
+  },
+  "men": {
+   "page": "permamen.html",
+   "name": "PermaMen",
+   "tag": "Esthétique masculine",
+   "lead": "La recherche de la perfection n'est plus une affaire féminine. PermaMen propose des solutions esthétiques pensées pour les hommes, discrètes et efficaces.",
+   "intro_title": "Une expertise dédiée",
+   "intro": "Les messieurs veulent aussi plaire et rester performants : la chirurgie esthétique se conjugue désormais au masculin. PermaMen vous accompagne avec des interventions ciblées et un suivi confidentiel.",
+   "procedures": [
+    {
+     "title": "Gynécomastie",
+     "text": "Réduction de l'excès de glande et de graisse au niveau de la poitrine masculine, pour un torse plat, ferme et viril. Une intervention qui restaure la confiance en soi.",
+     "img": "static/img/procedures/men-gynecomastie.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "1 à 2 h",
+       "Durée"
+      ],
+      [
+       "5 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Implant pectoral",
+     "text": "Pose d'implants pour donner au thorax un galbe plus marqué et musclé, une demande de plus en plus fréquente chez l'homme souhaitant sculpter sa silhouette.",
+     "img": "static/img/procedures/men-implant-pectoral.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "1 h 30",
+       "Durée"
+      ],
+      [
+       "5 à 7 jours",
+       "Séjour"
+      ]
+     ]
+    },
+    {
+     "title": "Pénoplastie",
+     "text": "Chirurgie intime qui améliore l'aspect esthétique du pénis en corrigeant son apparence, en toute discrétion et avec un suivi spécialisé.",
+     "img": "static/img/procedures/men-penoplastie.webp",
+     "meta": [
+      [
+       "Générale",
+       "Anesthésie"
+      ],
+      [
+       "Totale",
+       "Confidentialité"
+      ],
+      [
+       "Court",
+       "Séjour"
+      ]
+     ]
+    }
+   ]
+  },
+  "graft": {
+   "page": "permagraft.html",
+   "name": "PermaGraft",
+   "tag": "Greffe capillaire",
+   "lead": "Retrouvez une chevelure dense et naturelle grâce à la greffe de cheveux, une repousse durable réalisée par des équipes expertes.",
+   "intro_title": "Une expertise dédiée",
+   "intro": "La chute de cheveux concerne aussi bien les hommes que les femmes et peut générer de véritables complexes. Grâce à la greffe capillaire, vous vivez de nouveau avec vos vrais cheveux, qui poussent très naturellement. La Tunisie est devenue une destination phare alliant tourisme et greffe de cheveux.",
+   "procedures": [
+    {
+     "title": "Greffe de cheveux homme",
+     "text": "Prélèvement des follicules de la zone donneuse et réimplantation sur les zones dégarnies (golfes, tonsure) pour une ligne frontale naturelle et une densité retrouvée.",
+     "img": "static/img/procedures/graft-greffe-de-cheveux-homme.webp",
+     "meta": [
+      [
+       "FUE",
+       "Technique"
+      ],
+      [
+       "6 à 8 h",
+       "Durée"
+      ],
+      [
+       "Durable",
+       "Repousse"
+      ]
+     ]
+    },
+    {
+     "title": "Greffe de cheveux femme",
+     "text": "Densification ciblée adaptée à l'alopécie féminine, pour redonner du volume et combler les zones clairsemées en préservant le naturel.",
+     "img": "static/img/procedures/graft-greffe-de-cheveux-femme.webp",
+     "meta": [
+      [
+       "FUE",
+       "Technique"
+      ],
+      [
+       "6 à 8 h",
+       "Durée"
+      ],
+      [
+       "Naturel",
+       "Résultat"
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "doctors": [
+  {
+   "page": "docteurwalidbalti.html",
+   "name": "Dr Walid Balti",
+   "spec": "Chirurgie plastique, reconstructrice & esthétique",
+   "summary": "Lauréat de la Faculté de Médecine de Tunis, plus de 10 ans d'expérience et des stages de perfectionnement à Paris et Nice.",
+   "img": "static/img/dr-walid.webp",
+   "about": [
+    "Le Dr Walid Balti, lauréat et ancien assistant de la Faculté de Médecine de Tunis, fait partie des leaders en chirurgie plastique, reconstructrice et esthétique. Fort de plus de 10 ans d'expérience dans les établissements les plus reconnus du pays, il participe régulièrement aux conférences et congrès internationaux pour faire évoluer sa formation en continu.",
+    "Il a effectué plusieurs stages de perfectionnement en chirurgie plastique et esthétique à Paris dans le secteur privé, et intervient régulièrement dans des émissions tunisiennes et françaises. De nombreux patients européens font appel à lui pour bénéficier de son expertise.",
+    "Inscrit au Conseil de l'Ordre des médecins tunisiens (N°13361) et membre de la Société Tunisienne de Chirurgie Plastique, il réalise ses interventions dans les meilleures cliniques du pays, agréées par le ministère de la Santé et conformes aux normes de sécurité et d'hygiène les plus rigoureuses."
+   ],
+   "diplomas": [
+    "Lauréat de la Faculté de Médecine de Tunis",
+    "Spécialiste en chirurgie plastique, reconstructrice et esthétique",
+    "Ancien assistant à la Faculté de Médecine de Tunis",
+    "Ancien attaché au service de chirurgie plastique de l'Hôpital Saint-Louis, Paris",
+    "Ancien interne au service de chirurgie plastique, CHU de Nice",
+    "Diplôme des maladies du sein & diplôme de microchirurgie"
+   ]
+  },
+  {
+   "page": "docteuratefghedira.html",
+   "name": "Dr Atef Ghedira",
+   "spec": "Chirurgie esthétique, plastique & reconstructrice",
+   "summary": "Membre de la Société Tunisienne de Chirurgie Esthétique, expert de l'harmonisation de la silhouette et du visage.",
+   "img": "static/img/dr-atef.webp",
+   "about": [
+    "Doté d'une grande expérience en chirurgie esthétique, plastique et reconstructrice, le Dr Atef Ghedira est membre de la Société Tunisienne de Chirurgie Esthétique. Il accompagne ses patients dans l'harmonisation de leur silhouette comme de leur visage.",
+    "Son approche allie rigueur médicale et sens esthétique, pour des résultats naturels en adéquation avec les attentes de chacun, dans des cliniques agréées et sécurisées."
+   ],
+   "diplomas": [
+    "Spécialiste en chirurgie esthétique, plastique et reconstructrice",
+    "Membre de la Société Tunisienne de Chirurgie Esthétique",
+    "Expérience en chirurgie de la silhouette et du visage"
+   ]
+  },
+  {
+   "page": "docteurborhenebelkhiria.html",
+   "name": "Dr Borhene Belkhiria",
+   "spec": "Chirurgie esthétique & réparatrice",
+   "summary": "Président du syndicat national des chirurgiens esthétiques de Tunisie, formé à Paris et au Canada.",
+   "img": "static/img/dr-borhene.webp",
+   "about": [
+    "Le Dr Borhene Belkhiria figure parmi les leaders en chirurgie esthétique et réparatrice grâce aux formations qu'il a suivies à Paris et au Canada. Il réalise ses interventions au Canada, en Suisse et en Tunisie.",
+    "Il est également Président du syndicat national des chirurgiens esthétiques de Tunisie, un gage de reconnaissance par ses pairs et d'engagement pour la qualité des soins."
+   ],
+   "diplomas": [
+    "Formations à Paris et au Canada",
+    "Président du syndicat national des chirurgiens esthétiques de Tunisie",
+    "Interventions réalisées au Canada, en Suisse et en Tunisie"
+   ]
+  },
+  {
+   "page": "docteurhassenbenjemaahtml.html",
+   "name": "Dr Hassen Ben Jemaa",
+   "spec": "Chirurgie plastique & esthétique",
+   "summary": "Membre des sociétés américaine (ASPS), internationale (ISAPS) et française (SOFCPRE) de chirurgie plastique.",
+   "img": "static/img/dr-hassen.webp",
+   "about": [
+    "Le Dr Hassen Ben Jemaa est membre de la Société Américaine de Chirurgiens Plasticiens, de la Société Internationale de Chirurgie Esthétique et Plastique (ISAPS), de la Société Française de Chirurgie Plastique, Reconstructrice et Esthétique (SOFCPRE) et de la Société Tunisienne de Chirurgie Esthétique.",
+    "Il participe régulièrement à de nombreux congrès nationaux et internationaux, garantissant une pratique à la pointe des techniques les plus récentes."
+   ],
+   "diplomas": [
+    "Membre de la Société Américaine de Chirurgiens Plasticiens",
+    "Membre de l'ISAPS",
+    "Membre de la SOFCPRE",
+    "Membre de la Société Tunisienne de Chirurgie Esthétique"
+   ]
+  },
+  {
+   "page": "docteursamaherbouchnak.html",
+   "name": "Dr Samaher Bouchnak",
+   "spec": "Chirurgie esthétique",
+   "summary": "Membre du bureau T.A.M.A.S et ancienne interne des hôpitaux de Tunis.",
+   "img": "static/img/dr-samaher.webp",
+   "about": [
+    "Le Dr Samaher Bouchnak est membre du bureau T.A.M.A.S et ancienne interne des hôpitaux de Tunis. Elle met son expertise et son écoute au service de chaque patient.",
+    "Son approche personnalisée et son exigence de qualité assurent un accompagnement attentif, du premier échange jusqu'au suivi post-opératoire."
+   ],
+   "diplomas": [
+    "Ancienne interne des hôpitaux de Tunis",
+    "Membre du bureau T.A.M.A.S",
+    "Spécialiste en chirurgie esthétique"
+   ]
+  },
+  {
+   "page": "docteurferielbensmida.html",
+   "name": "Dr Feriel Ben Smida",
+   "spec": "Dentisterie esthétique",
+   "summary": "Diplômée de dentisterie esthétique de l'Université de Nice, formée en implantologie et Invisalign®.",
+   "img": "static/img/dr-feriel.webp",
+   "about": [
+    "Perma-esthétique a choisi pour votre santé dentaire le Dr Feriel Ben Smida, titulaire d'un diplôme de dentisterie esthétique de l'Université de Nice (France).",
+    "Elle a complété sa formation en parodontologie et implantologie, en techniques d'injection d'acide hyaluronique et en orthodontie invisible Invisalign®, pour vous offrir un sourire harmonieux et durable."
+   ],
+   "diplomas": [
+    "Diplôme de dentisterie esthétique, Université de Nice (France)",
+    "Formation en parodontologie et implantologie",
+    "Techniques d'injection d'acide hyaluronique",
+    "Orthodontie invisible Invisalign®"
+   ]
+  },
+  {
+   "page": "docteurramsesmouelhi.html",
+   "name": "Dr Ramses Mouelhi",
+   "spec": "Dentisterie esthétique & Smile Design",
+   "summary": "Dentiste esthétique et designer de sourire, plus de 10 ans d'expérience.",
+   "img": "static/img/dr-ramses.webp",
+   "about": [
+    "Le Dr Ramses Mouelhi est dentiste esthétique et designer de sourire, fort de plus de 10 ans d'expérience dans le secteur privé. Il s'est formé à l'Hôpital militaire de Tunis en chirurgie dentaire ainsi qu'en dentisterie esthétique et prothétique.",
+    "Ancien interne des hôpitaux de Tunis, il a suivi un stage continu en dentisterie esthétique « Designer Smile » pour concevoir des sourires sur-mesure."
+   ],
+   "diplomas": [
+    "Formation en chirurgie dentaire, Hôpital militaire de Tunis",
+    "Dentisterie esthétique et prothétique",
+    "Stage continu « Designer Smile »",
+    "Ancien interne des hôpitaux de Tunis"
+   ]
+  },
+  {
+   "page": "sofienayadihtml.html",
+   "name": "Dr Sofiene Ayadi",
+   "spec": "Chirurgie digestive & de l'obésité",
+   "summary": "Expert en chirurgie digestive cœlioscopique et bariatrique, formé à Bruxelles (ULB) et Paris (IGR).",
+   "img": "static/img/dr-sofiene.webp",
+   "about": [
+    "Le Dr Sofiene Ayadi est un expert en chirurgie digestive cœlioscopique et de l'obésité. Il a effectué ses études médicales à la Faculté de Médecine de Tunis, suivies d'une formation de chirurgien digestif à l'Hôpital La Rabta (service de chirurgie 1).",
+    "Il a été interne en chirurgie bariatrique à l'Université Libre de Bruxelles (ULB) et à l'Institut Gustave Roussy (IGR) à Paris, ce qui fait de lui une référence pour la chirurgie de l'obésité."
+   ],
+   "diplomas": [
+    "Études médicales, Faculté de Médecine de Tunis",
+    "Formation de chirurgien digestif, Hôpital La Rabta",
+    "Interne en chirurgie bariatrique, ULB Bruxelles",
+    "Stage à l'Institut Gustave Roussy (IGR), Paris"
+   ]
+  }
+ ],
+ "pages": {
+  "sejour": {
+   "lead": "Des chirurgies esthétiques dans les meilleures conditions, aux prix les plus abordables, avec un séjour pensé dans le moindre détail.",
+   "steps": [
+    {
+     "title": "Votre devis",
+     "text": "Envoyez vos photos et vos attentes : vous recevez un devis gratuit et personnalisé sous 24 h."
+    },
+    {
+     "title": "Accueil à l'aéroport",
+     "text": "Dès votre arrivée, une hôtesse vous accueille, vous remet un téléphone avec carte SIM et vous accompagne à l'hôtel."
+    },
+    {
+     "title": "Votre intervention",
+     "text": "L'opération est réalisée par votre chirurgien dans une clinique agréée, avec un suivi médical complet."
+    },
+    {
+     "title": "Détente & découverte",
+     "text": "Convalescence à l'hôtel et programme touristique pour découvrir les plus beaux endroits de Tunisie."
+    }
+   ],
+   "included": [
+    {
+     "title": "Hébergement au choix",
+     "text": "Hôtels de 1 à 5 étoiles, en pension complète, demi-pension ou à la carte — ou sans hébergement si vous préférez."
+    },
+    {
+     "title": "Assistance 24/7",
+     "text": "Une hôtesse dédiée prend en charge la totalité de votre séjour, de l'arrivée au départ."
+    },
+    {
+     "title": "Tourisme inclus",
+     "text": "Un programme sur-mesure pour découvrir la Tunisie, destination de premier plan idéalement située."
+    },
+    {
+     "title": "Sécurité & qualité",
+     "text": "Cliniques agréées, chirurgiens experts et prix parmi les plus abordables, sans compromis sur la qualité."
+    }
+   ],
+   "faq": [
+    {
+     "q": "Le devis est-il vraiment gratuit ?",
+     "a": "Oui. Envoyez-nous vos attentes (et vos photos si vous le souhaitez) : vous recevez un devis gratuit et personnalisé sous 24 h, sans aucun engagement."
+    },
+    {
+     "q": "Combien de temps dois-je rester en Tunisie ?",
+     "a": "Cela dépend de l'intervention : quelques jours pour la médecine esthétique, 7 à 10 jours pour un lifting cervico-facial par exemple. Votre devis précise la durée conseillée par le chirurgien."
+    },
+    {
+     "q": "Qui m'accueille à mon arrivée ?",
+     "a": "Une hôtesse vous attend à l'aéroport, vous remet un téléphone avec carte SIM et vous accompagne à votre hôtel. Elle reste votre contact pendant tout le séjour."
+    },
+    {
+     "q": "Les cliniques sont-elles sûres ?",
+     "a": "Nos cliniques partenaires sont privées, agréées par le ministère de la Santé tunisien et conformes aux normes de sécurité et d'hygiène les plus rigoureuses."
+    },
+    {
+     "q": "Qui va m'opérer ?",
+     "a": "Un chirurgien de notre équipe, dont vous pouvez consulter le profil dès maintenant : formation, expérience et sociétés savantes. Vous le rencontrez avant l'intervention."
+    },
+    {
+     "q": "Puis-je choisir mon hébergement ?",
+     "a": "Oui : hôtels de 1 à 5 étoiles, en pension complète, demi-pension ou à la carte, ou sans hébergement si vous préférez."
+    },
+    {
+     "q": "Pourrai-je découvrir la Tunisie ?",
+     "a": "Un programme touristique sur mesure vous est proposé pendant votre convalescence, toujours dans le respect des consignes de votre chirurgien."
+    },
+    {
+     "q": "Mes données restent-elles confidentielles ?",
+     "a": "Oui. Votre projet, vos photos et vos informations sont traités de façon strictement confidentielle."
+    }
+   ]
+  },
+  "about": {
+   "lead": "Permagroup, agence de tourisme médical en Tunisie, au service de votre bien-être et de votre confiance.",
+   "mission_title": "Le tourisme médical, autrement",
+   "mission": [
+    "Permagroup est une agence de tourisme médical en Tunisie conventionnée, avec des filiales implantées en Allemagne, au Canada, en France et aux États-Unis.",
+    "Notre mission consiste à garantir le bon déroulement de vos interventions, réalisées par les chirurgiens les plus renommés de Tunisie et de l'étranger, dans les cliniques privées les plus luxueuses et confortables.",
+    "Nous veillons sur le bon déroulement de vos soins, entre de bonnes mains, tout en organisant un séjour touristique inoubliable, pour un résultat satisfaisant et en adéquation avec vos attentes."
+   ],
+   "badge": [
+    "4",
+    "filiales en Allemagne, Canada, France & USA"
+   ],
+   "values": [
+    {
+     "title": "Respect",
+     "text": "C'est le socle de nos valeurs : nous traitons nos clients avec égard, leurs croyances et cultures sont respectées, leur intimité et leur tranquillité préservées."
+    },
+    {
+     "title": "Responsabilité",
+     "text": "Notre sérieux et notre loyauté nous rendent dignes de votre confiance."
+    },
+    {
+     "title": "Empathie",
+     "text": "Notre client est au centre de nos préoccupations : nous sommes à son écoute pour comprendre ses besoins et ses appréhensions."
+    },
+    {
+     "title": "Excellence",
+     "text": "Les chirurgiens les plus renommés de Tunisie et d'ailleurs, pour des résultats à la hauteur de vos attentes."
+    },
+    {
+     "title": "Sécurité",
+     "text": "Des cliniques privées agréées, conformes aux normes de sécurité et d'hygiène les plus rigoureuses."
+    },
+    {
+     "title": "Accompagnement",
+     "text": "Une assistance personnalisée du début à la fin, pour un parcours serein et sans stress."
+    }
+   ],
+   "reasons": [
+    "La ponctualité est la clé de notre réussite.",
+    "Des chirurgiens renommés, formés en Europe et en Amérique du Nord.",
+    "Des cliniques agréées par le ministère de la Santé tunisien.",
+    "Un devis gratuit et personnalisé, sous 24 h.",
+    "Un accueil à l'aéroport et un téléphone avec carte SIM dès votre arrivée.",
+    "Une hôtesse dédiée pendant toute la durée de votre séjour.",
+    "Un hébergement au choix, de 1 à 5 étoiles.",
+    "Des prix parmi les plus abordables, sans compromis sur la qualité.",
+    "Un programme touristique sur mesure pour découvrir la Tunisie.",
+    "Une présence internationale : Allemagne, Canada, France et États-Unis."
+   ],
+   "pledges": [
+    {
+     "title": "Un devis clair, sous 24 h",
+     "text": "Gratuit, personnalisé et sans engagement. Vous savez ce qui est prévu avant de réserver quoi que ce soit.",
+     "note": "promis !"
+    },
+    {
+     "title": "Vous savez qui vous opère",
+     "text": "Chaque chirurgien a son profil public : parcours, diplômes, sociétés savantes (ASPS, ISAPS, SOFCPRE…).",
+     "note": "transparence"
+    },
+    {
+     "title": "Des cliniques agréées",
+     "text": "Toutes nos cliniques partenaires sont agréées par le ministère de la Santé tunisien.",
+     "note": "sécurité"
+    },
+    {
+     "title": "Joignable à tout moment",
+     "text": "Dès l'aéroport, une hôtesse dédiée et un téléphone avec carte SIM pour ne jamais être seul(e).",
+     "note": "toujours là"
+    },
+    {
+     "title": "Un suivi médical complet",
+     "text": "Avant, pendant et après l'intervention, votre chirurgien et notre équipe veillent sur vous.",
+     "note": "avec douceur"
+    },
+    {
+     "title": "Discrétion totale",
+     "text": "Vos données et votre projet restent confidentiels. Votre intimité est respectée, toujours.",
+     "note": "chut…"
+    }
+   ]
+  },
+  "contact": {
+   "lead": "Une question, un projet ? Notre équipe vous répond sous 24 h et vous accompagne à chaque étape.",
+   "info": [
+    {
+     "title": "Téléphone",
+     "text": "(+216) 22 929 389"
+    },
+    {
+     "title": "E-mail",
+     "text": "contact@perma.doctor"
+    },
+    {
+     "title": "Adresse",
+     "text": "Immeuble Perma, HI64 Hédi Nouira, Borj Louzir, Ariana, Tunisie"
+    },
+    {
+     "title": "WhatsApp",
+     "text": "Écrivez-nous directement"
+    }
+   ]
+  }
+ },
+ "site": {
+  "phone": "(+216) 22 929 389",
+  "whatsapp": "21622929389",
+  "email": "contact@perma.doctor",
+  "address": "Immeuble Perma, HI64 Hédi Nouira, Borj Louzir, Ariana, Tunisie",
+  "about_short": "Permagroup, groupe international de chirurgie esthétique spécialisé dans le tourisme médical en Tunisie. Des chirurgiens d'excellence, des cliniques agréées et un séjour pensé pour vous.",
+  "home_lead": "Permagroup réunit les meilleurs chirurgiens esthétiques de Tunisie, des cliniques agréées et un séjour pensé pour vous. Un résultat naturel, en toute sécurité.",
+  "home_about": "Permagroup est une société de chirurgie esthétique à l'échelle internationale, spécialisée dans le tourisme médical en Tunisie.",
+  "home_points": [
+   "Des chirurgiens parmi les plus renommés, formés en Europe et en Amérique du Nord.",
+   "Des cliniques privées luxueuses, conformes aux normes d'hygiène les plus strictes.",
+   "Une assistance personnalisée, de l'aéroport au retour, et un séjour inoubliable."
+  ],
+  "stats": [
+   [
+    "15+",
+    "ans d'expérience"
+   ],
+   [
+    "8",
+    "pôles spécialisés"
+   ],
+   [
+    "5000+",
+    "patients satisfaits"
+   ],
+   [
+    "4",
+    "filiales internationales"
+   ]
+  ]
+ }
+}
