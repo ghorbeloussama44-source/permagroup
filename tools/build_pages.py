@@ -11,6 +11,14 @@ C = json.load(open(os.path.join(ROOT, 'content/site.json'), encoding='utf-8'))
 PART = lambda n: open(os.path.join(ROOT, 'tools/partials', n), encoding='utf-8').read()
 SITE = C['site']
 
+# ---------------------------------------------------------------- SEO
+# Tant que le domaine officiel n'est pas branché, le site reste invisible des moteurs
+# (noindex + robots.txt fermé). Le jour J : SEO_LIVE = True, puis relancer ce script.
+SEO_LIVE = False
+DOMAIN = 'https://perma.doctor'
+ORG_ID = DOMAIN + '/#organisation'
+TODAY = __import__('datetime').date.today().isoformat()
+
 # ---------------------------------------------------------------- pôles
 ORDER = ['face', 'breast', 'shape', 'thin', 'cosmetic', 'teeth', 'men', 'graft']
 COLORS = {'face': '#8282C6', 'breast': '#C8668A', 'shape': '#BFA15E', 'thin': '#D35C79',
@@ -59,7 +67,10 @@ I = {
 WA_SVG = '<svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3.2C9 3.2 3.3 8.9 3.3 15.9c0 2.4.7 4.7 1.9 6.7L3.2 28.8l6.4-2c1.9 1.1 4.1 1.6 6.4 1.6 7 0 12.7-5.7 12.7-12.7S23 3.2 16 3.2zm0 23c-2.1 0-4.1-.6-5.8-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.2 10.2 0 1 1 9.1 4.9zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.4 8.4 0 0 1-4.2-3.7c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.4 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>'
 
 # ---------------------------------------------------------------- gabarit commun
-def head(title, desc):
+def url(name):
+    return DOMAIN + '/' + ('' if name == 'index.html' else name)
+
+def head(name, title, desc, og, ld):
     return '''<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -67,6 +78,20 @@ def head(title, desc):
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>%s</title>
 <meta name="description" content="%s">
+<meta name="robots" content="%s">
+<link rel="canonical" href="%s">
+<link rel="alternate" hreflang="fr" href="%s">
+<link rel="alternate" hreflang="x-default" href="%s">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Perma.doctor">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="%s">
+<meta property="og:description" content="%s">
+<meta property="og:url" content="%s">
+<meta property="og:image" content="%s/static/img/og/%s">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0E2427">
 <link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,9 +99,25 @@ def head(title, desc):
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..700&family=Manrope:wght@400;500;600;700&display=swap">
 <script>try{if(sessionStorage.getItem("pd_seen"))document.documentElement.classList.add("pl-off")}catch(e){}</script>
 <link rel="stylesheet" href="static/css/site.css">
+<script type="application/ld+json">%s</script>
 </head>
 <body>
-''' % (E(title), E(desc))
+''' % (E(title), E(desc), 'index, follow, max-image-preview:large' if SEO_LIVE else 'noindex, nofollow',
+       url(name), url(name), url(name), E(title), E(desc), url(name), DOMAIN, og,
+       json.dumps({'@context': 'https://schema.org', '@graph': ld}, ensure_ascii=False).replace('</', '<\\/'))
+
+# fil d'Ariane de la page en cours (renseigné par hero(), relu par page())
+CRUMBS = []
+
+def org():
+    a = SITE['address']
+    return {'@type': 'MedicalBusiness', '@id': ORG_ID, 'name': 'Permagroup', 'alternateName': 'Perma.doctor',
+            'url': DOMAIN + '/', 'logo': DOMAIN + '/static/img/swan.svg', 'image': DOMAIN + '/static/img/og/home.jpg',
+            'description': SITE['about_short'], 'telephone': '+216 22 929 389', 'email': SITE['email'],
+            'address': {'@type': 'PostalAddress', 'streetAddress': a.split(',')[0].strip(), 'addressLocality': 'Ariana',
+                        'addressCountry': 'TN'},
+            'medicalSpecialty': ['PlasticSurgery', 'Dentistry'],
+            'contactPoint': {'@type': 'ContactPoint', 'telephone': '+216 22 929 389', 'contactType': 'customer service'}}
 
 NAV = [('index.html', 'Accueil', 'home'), (None, 'Nos pôles', 'poles'), ('medecins.html', 'Notre équipe', 'team'),
        ('sejour.html', 'Le séjour', 'stay'), ('contact.html', 'Contact', 'contact')]
@@ -133,6 +174,7 @@ def footer():
 
 # ---------------------------------------------------------------- blocs
 def hero(img, alt, eyebrow, title, lead, ctas, crumbs=None, tag=None, page=True, gl=True):
+    CRUMBS[:] = crumbs or []
     cr = ''
     if crumbs:
         cr = '<nav class="crumbs" aria-label="Fil d’Ariane">' + '<span>·</span>'.join(
@@ -344,8 +386,18 @@ def faq():
 ''' % (sec_head('Questions fréquentes', 'Tout ce que vous vous <em>demandez</em>', 'Une autre question ? Nos conseillers vous répondent sous 24 h, en toute confidentialité.',
                 link('https://wa.me/%s' % SITE['whatsapp'], 'Poser ma question')), acc(items))
 
-def page(name, title, desc, active, body, rdv='contact.html#rdv', cta_href='contact.html#rdv'):
-    html = head(title, desc) + header(active, rdv) + '<main id="top">\n  ' + body + cta(cta_href) + '</main>\n\n' + footer()
+PAGES = []
+
+def page(name, title, desc, active, body, rdv='contact.html#rdv', cta_href='contact.html#rdv', og='home.jpg', ld=()):
+    graph = [{'@type': 'WebPage', '@id': url(name) + '#page', 'url': url(name), 'name': title, 'description': desc,
+              'inLanguage': 'fr-FR', 'isPartOf': {'@id': DOMAIN + '/#site'}, 'publisher': {'@id': ORG_ID},
+              'primaryImageOfPage': DOMAIN + '/static/img/og/' + og}]
+    if CRUMBS:
+        graph.append({'@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': i + 1, 'name': l, 'item': url((h or name).split('#')[0])} for i, (h, l) in enumerate(CRUMBS)]})
+    graph += list(ld)
+    PAGES.append(name)
+    html = head(name, title, desc, og, graph) + header(active, rdv) + '<main id="top">\n  ' + body + cta(cta_href) + '</main>\n\n' + footer()
     open(os.path.join(ROOT, name), 'w', encoding='utf-8').write(html)
     print('écrit', name)
 
@@ -369,7 +421,9 @@ def build_index():
     body += KINETIC + TESTI + RDV
     page('index.html', 'Perma.doctor — Chirurgie esthétique & tourisme médical en Tunisie',
          "Permagroup, groupe international de chirurgie esthétique en Tunisie. Chirurgiens d'excellence, cliniques agréées et séjour tout compris. Devis gratuit.",
-         'home', body, rdv='#rdv', cta_href='#rdv')
+         'home', body, rdv='#rdv', cta_href='#rdv', og='home.jpg',
+         ld=[org(), {'@type': 'WebSite', '@id': DOMAIN + '/#site', 'url': DOMAIN + '/', 'name': 'Perma.doctor',
+                     'inLanguage': 'fr-FR', 'publisher': {'@id': ORG_ID}}])
 
 def proc_img(pr):
     # photos par procédure à venir (brief ChatGPT) ; sans fichier, le fond dégradé + cygne prend le relais
@@ -409,7 +463,9 @@ def build_poles():
   </section>
 ''' % (sec_head('Nos autres pôles', 'Une expertise complète'), poles_grid(exclude=k))
         page(p['page'], '%s — %s | Perma.doctor' % (p['name'], src['tag']), src['lead'], 'poles', body,
-             cta_href='contact.html?pole=%s#rdv' % k)
+             cta_href='contact.html?pole=%s#rdv' % k, og='pole-%s.jpg' % k,
+             ld=[{'@type': 'MedicalProcedure', 'name': pr['title'], 'description': pr['text'], 'url': url(p['page']) + '#procedures'}
+                 for pr in src['procedures']])
 
 def build_doctors():
     for d in C['doctors']:
@@ -432,7 +488,13 @@ def build_doctors():
   </section>
 ''' % (''.join('<p>%s</p>' % E(x) for x in d['about']), ''.join('<li>%s</li>' % E(x) for x in d['diplomas']),
        btn('contact.html#rdv', 'Prendre rendez-vous'))
-        page(d['page'], '%s — %s | Perma.doctor' % (d['name'], d['spec']), d['summary'], 'team', body)
+        page(d['page'], '%s — %s | Perma.doctor' % (d['name'], d['spec']), d['summary'], 'team', body,
+             og='dr-%s' % os.path.basename(d['img']).replace('.webp', '.jpg')[3:], ld=[person(d)])
+
+def person(d):
+    return {'@type': 'Person', '@id': url(d['page']) + '#praticien', 'name': d['name'], 'jobTitle': d['spec'],
+            'description': d['summary'], 'image': DOMAIN + '/' + d['img'], 'url': url(d['page']), 'worksFor': {'@id': ORG_ID},
+            'hasCredential': [{'@type': 'EducationalOccupationalCredential', 'name': x} for x in d['diplomas']]}
 
 def build_team():
     cards = []
@@ -456,7 +518,9 @@ def build_team():
        '\n        '.join(cards))
     body += why_clinic('equipe', ('#medecins', 'Voir les profils'))
     page('medecins.html', 'Notre équipe — Chirurgiens d’exception | Perma.doctor',
-         'Chirurgiens plasticiens, dentistes esthétiques et chirurgiens digestifs : une équipe pluridisciplinaire au service de votre transformation.', 'team', body)
+         'Chirurgiens plasticiens, dentistes esthétiques et chirurgiens digestifs : une équipe pluridisciplinaire au service de votre transformation.', 'team', body,
+         og='equipe.jpg', ld=[{'@type': 'ItemList', 'itemListElement': [
+             {'@type': 'ListItem', 'position': i + 1, 'url': url(d['page']), 'name': d['name']} for i, d in enumerate(C['doctors'])]}])
 
 def build_sejour():
     S = C['pages']['sejour']
@@ -482,7 +546,9 @@ def build_sejour():
 ''' % (sec_head('Inclus dans votre séjour', 'Tout est prévu pour vous'),
        ''.join('<div class="card4 rv %s">%s<h3>%s</h3><p>%s</p></div>' % (('rv-d%d' % i) if i else '', ico(icons[i % 4]), E(s['title']), E(s['text'])) for i, s in enumerate(S['included'])))
     body += faq()
-    page('sejour.html', 'Le séjour — Tourisme médical en Tunisie | Perma.doctor', S['lead'], 'stay', body)
+    page('sejour.html', 'Le séjour — Tourisme médical en Tunisie | Perma.doctor', S['lead'], 'stay', body, og='sejour.jpg',
+         ld=[{'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': f['q'], 'acceptedAnswer': {'@type': 'Answer', 'text': f['a']}}
+                                                 for f in S['faq']]}])
 
 def build_about():
     A = C['pages']['about']
@@ -534,7 +600,7 @@ def build_about():
 ''' % (sec_head('Confiance totale', 'Entre de <em>bonnes</em> mains', 'Partir se faire opérer à l’étranger, c’est confier ce que vous avez de plus précieux. Voici nos six promesses.'),
        ''.join('<article class="pledge rv %s" style="--c:%s"><em>%s</em><h3>%s</h3><p>%s</p></article>' % (('rv-d%d' % (i % 3)) if i % 3 else '', cols[i % 6], E(x['note']), E(x['title']), E(x['text'])) for i, x in enumerate(A['pledges'])))
     body += KINETIC
-    page('quisommesnous.html', 'Qui sommes-nous — Permagroup | Perma.doctor', A['lead'], 'about', body)
+    page('quisommesnous.html', 'Qui sommes-nous — Permagroup | Perma.doctor', A['lead'], 'about', body, og='groupe.jpg', ld=[org()])
 
 def build_contact():
     K = C['pages']['contact']
@@ -554,7 +620,21 @@ def build_contact():
 ''' % (sec_head('Nous contacter', 'Restons en contact'),
        ''.join('<a class="cc rv %s" href="%s"%s>%s<small>%s</small><b>%s</b></a>' % (('rv-d%d' % i) if i else '', h, ' target="_blank" rel="noopener"' if h.startswith('http') else '', ico(ic), E(t), E(v)) for i, (ic, t, v, h) in enumerate(cards)))
     body += faq()
-    page('contact.html', 'Contact & devis gratuit | Perma.doctor', K['lead'], 'contact', body, rdv='#rdv', cta_href='#rdv')
+    page('contact.html', 'Contact & devis gratuit | Perma.doctor', K['lead'], 'contact', body, rdv='#rdv', cta_href='#rdv', ld=[org()])
+
+def seo_files():
+    prio = {'index.html': '1.0', 'contact.html': '0.9'}
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for n in PAGES:
+        sm.append('  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>' % (
+            url(n), TODAY, prio.get(n, '0.8' if n.startswith('perma') else '0.6')))
+    sm.append('</urlset>')
+    open(os.path.join(ROOT, 'sitemap.xml'), 'w').write('\n'.join(sm) + '\n')
+    robots = ('User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n' % DOMAIN) if SEO_LIVE else (
+        '# Pré-lancement : le site n\'est pas encore ouvert aux moteurs (voir SEO_LIVE dans tools/build_pages.py)\nUser-agent: *\nDisallow: /\n')
+    open(os.path.join(ROOT, 'robots.txt'), 'w').write(robots)
+    print('écrit sitemap.xml (%d URL), robots.txt (%s)' % (len(PAGES), 'ouvert' if SEO_LIVE else 'fermé'))
 
 if __name__ == '__main__':
     build_index(); build_poles(); build_doctors(); build_team(); build_sejour(); build_about(); build_contact()
+    seo_files()
